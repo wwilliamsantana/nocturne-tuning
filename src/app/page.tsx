@@ -1,9 +1,10 @@
-import Container from "@/components/ui/Container";
+import Hero from "@/components/sections/Hero";
 
 export default function Home() {
   return (
-    <Container>
-      <h1>Hello</h1>
-    </Container>
+    <main>
+      <Hero />
+      <div></div>
+    </main>
   );
 }
