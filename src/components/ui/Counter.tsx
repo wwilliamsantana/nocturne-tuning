@@ -3,15 +3,17 @@
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
+interface CounterProps {
+  value: number;
+  suffix?: string;
+  decimals?: number;
+}
+
 export default function Counter({
   value,
   suffix = "",
   decimals = 0,
-}: {
-  value: number;
-  suffix?: string;
-  decimals?: number;
-}) {
+}: CounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { damping: 30, stiffness: 100 });

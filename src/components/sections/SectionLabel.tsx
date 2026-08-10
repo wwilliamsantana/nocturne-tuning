@@ -1,14 +1,16 @@
 import { cn } from "@/lib/utils";
 
+interface SectionLabelProps {
+  number: string;
+  label: string;
+  className?: string;
+}
+
 export default function SectionLabel({
   number,
   label,
   className,
-}: {
-  number: string;
-  label: string;
-  className?: string;
-}) {
+}: SectionLabelProps) {
   return (
     <div
       className={cn(
