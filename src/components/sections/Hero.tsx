@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import Container from "@/components/ui/Container";
-import Counter from "@/components/ui/Counter";
+import { Spec } from "./Spec";
 
 const headline = "NOCTURNE";
 
@@ -32,6 +32,7 @@ const fadeUp: Variants = {
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
+  const [canPlayVideo, setCanPlayVideo] = useState(false);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
@@ -40,6 +41,14 @@ export default function Hero() {
   const videoY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.4, 0.85]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setCanPlayVideo(true);
+    }, 200);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <section
@@ -55,7 +64,11 @@ export default function Hero() {
           playsInline
           poster="/images/hero-poster.jpg"
         >
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          {canPlayVideo && (
+            <>
+              <source src="/videos/hero-bg.mp4" type="video/mp4" />
+            </>
+          )}
         </video>
       </motion.div>
 
@@ -142,25 +155,5 @@ export default function Hero() {
         </Container>
       </motion.div>
     </section>
-  );
-}
-
-interface SpecProps {
-  label: string;
-  value: number;
-  suffix: string;
-  decimals?: number;
-}
-
-function Spec({ label, value, suffix, decimals = 0 }: SpecProps) {
-  return (
-    <div className="flex flex-col gap-1">
-      <span className="font-mono text-2xl text-foreground sm:text-3xl">
-        <Counter value={value} suffix={suffix} decimals={decimals} />
-      </span>
-      <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted">
-        {label}
-      </span>
-    </div>
   );
 }
