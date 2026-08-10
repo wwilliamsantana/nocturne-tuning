@@ -1,3 +1,9 @@
+import Container from "@/components/ui/Container";
+
 export default function Home() {
-  return <h1>Hello</h1>;
+  return (
+    <Container>
+      <h1>Hello</h1>
+    </Container>
+  );
 }

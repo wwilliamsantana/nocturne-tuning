@@ -1,1 +1,81 @@
 @import "tailwindcss";
+
+@theme {
+  /* Cores */
+  --color-background: #0a0a0b;
+  --color-surface: #131315;
+  --color-surface-2: #1c1c1f;
+  --color-line: #2a2a2e;
+  --color-foreground: #f2f2f0;
+  --color-muted: #8a8a90;
+  --color-accent: #ff3b30;
+  --color-accent-amber: #ff8a00;
+
+  /* Tipografia */
+  --font-display: var(--font-fraunces), serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  /* Sombras */
+  --shadow-glow: 0 0 40px rgba(255, 59, 48, 0.35);
+  --shadow-glow-amber: 0 0 40px rgba(255, 138, 0, 0.3);
+
+  /* Animação */
+  --animate-pulse-glow: pulse-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings:
+      "ss01" on,
+      "ss02" on;
+  }
+
+  ::selection {
+    @apply bg-accent text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-line rounded-full;
+  }
+}
+
+/* Utilitários customizados (texturas) */
+@utility bg-carbon {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #141416 0px,
+    #141416 2px,
+    #0f0f11 2px,
+    #0f0f11 4px
+  );
+}
+
+@utility bg-radial-fade {
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgba(255, 59, 48, 0.15),
+    transparent 60%
+  );
+}
