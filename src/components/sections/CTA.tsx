@@ -12,16 +12,16 @@ export default function CTA() {
       <Container className="relative z-10">
         <Reveal className="mx-auto max-w-3xl text-center">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
-            Nocturne / Reserve sua unidade
+            Nocturne / Fale com nossa oficina
           </span>
 
           <h2 className="mt-6 font-display text-4xl italic leading-[1.05] text-foreground sm:text-6xl lg:text-7xl">
-            A noite tem um novo ritmo.
+            Seu carro pode render mais.
           </h2>
 
           <p className="mx-auto mt-6 max-w-md text-base text-muted sm:text-lg">
-            Produção limitada. Cada unidade é configurada individualmente antes
-            de deixar o estúdio.
+            Cada preparação é avaliada individualmente. Fale com a gente e
+            descubra o que é possível fazer com o seu.
           </p>
 
           <motion.a
@@ -36,7 +36,7 @@ export default function CTA() {
               className="absolute inset-0 bg-accent"
             />
             <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-              Falar com a Nocturne
+              Solicitar orçamento
             </span>
             <motion.span
               variants={{ hover: { x: 4 } }}

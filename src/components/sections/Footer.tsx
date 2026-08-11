@@ -1,9 +1,14 @@
 import Container from "@/components/ui/Container";
 
 const links = {
-  Marca: ["Sobre", "Engenharia", "Design", "Sustentabilidade"],
-  Modelos: ["Nocturne GT", "Nocturne Spyder", "Configurador"],
-  Contato: ["Concessionárias", "Imprensa", "Carreiras"],
+  Marca: ["Sobre", "Nossa oficina", "Processo", "Garantia"],
+  Serviços: [
+    "Preparação de motor",
+    "Suspensão e chassis",
+    "Escapamento",
+    "Remap/ECU",
+  ],
+  Contato: ["Orçamento", "Agendar visita", "Imprensa"],
 };
 
 export default function Footer() {
@@ -16,7 +21,7 @@ export default function Footer() {
               Nocturne
             </span>
             <p className="mt-4 max-w-55 text-sm text-muted">
-              Design que respira velocidade.
+              Preparação automotiva de alta performance, sob medida.
             </p>
           </div>
 

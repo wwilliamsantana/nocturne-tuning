@@ -30,7 +30,7 @@ export default function Specs() {
 
         <Reveal delay={0.1} className="mt-6 max-w-2xl">
           <h2 className="font-display text-4xl italic leading-tight text-foreground sm:text-5xl lg:text-6xl">
-            Cada número existe por um motivo.
+            Um exemplo do que sai da nossa oficina.
           </h2>
         </Reveal>
 

@@ -88,8 +88,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex items-center justify-between font-mono text-xs uppercase tracking-[0.2em] text-muted"
           >
-            <span>Nocturne / Performance Concept</span>
-            <span className="hidden sm:inline">Est. 2026</span>
+            <span>Nocturne / Preparação Automotiva de Performance</span>
+            <span className="hidden sm:inline">Desde 2018</span>
           </motion.div>
         </Container>
 
@@ -118,8 +118,9 @@ export default function Hero() {
             transition={{ delay: 1.1 }}
             className="mt-6 max-w-md font-body text-base text-muted sm:text-lg"
           >
-            Engenharia noturna. Design que respira velocidade — um conceito de
-            performance construído para viver entre o silêncio e a adrenalina.
+            Preparamos motores e chassis para quem não aceita o carro de fábrica
+            como ponto final. Este projeto abaixo é um exemplo real do nosso
+            trabalho.
           </motion.p>
         </Container>
 
