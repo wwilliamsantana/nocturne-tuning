@@ -116,7 +116,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             transition={{ delay: 1.1 }}
-            className="mt-6 max-w-md font-body text-base text-muted sm:text-lg"
+            className="mt-6 max-w-md font-body text-base text-slate-300 sm:text-lg"
           >
             Preparamos motores e chassis para quem não aceita o carro de fábrica
             como ponto final. Este projeto abaixo é um exemplo real do nosso
