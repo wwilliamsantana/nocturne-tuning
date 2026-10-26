@@ -32,21 +32,6 @@ npm run start    # roda o build de produção localmente
 npm run lint      # checagem de lint
 ```
 
-##  Design system
-
-Definido em `src/app/globals.css` via `@theme` (Tailwind v4 é CSS-first,
-não usa mais `tailwind.config.ts` para tema):
-
-| Token | Valor | Uso |
-|---|---|---|
-| `background` | `#0A0A0B` | fundo base |
-| `surface` / `surface-2` | `#131315` / `#1C1C1F` | cards, seções alternadas |
-| `accent` | `#FF3B30` | destaque vermelho de corrida |
-| `accent-amber` | `#FF8A00` | destaque âmbar de painel |
-| `font-display` | Fraunces | títulos editoriais |
-| `font-body` | Inter | texto corrido |
-| `font-mono` | JetBrains Mono | specs, labels tipo HUD |
-
 ## Assets necessários
 
 O projeto espera os seguintes arquivos em `public/` (gerados via Nano Banana / Veo 3 — ver prompts no histórico do projeto):
